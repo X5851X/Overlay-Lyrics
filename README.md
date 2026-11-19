@@ -9,6 +9,8 @@ Status: tahap 1, extension untuk YouTube. Aplikasi Windows dan Android menyusul.
 Butuh Node.js 20.19 atau yang lebih baru.
 
 ```bash
+git clone https://github.com/X5851X/Overlay-Lyrics.git
+cd Overlay-Lyrics
 npm install
 npm run build
 ```

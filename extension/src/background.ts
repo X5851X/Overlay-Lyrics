@@ -9,9 +9,12 @@ import {
 } from './messages';
 import { StorageCache } from './storage-cache';
 
+const HOMEPAGE = 'https://github.com/X5851X/Overlay-Lyrics';
+
 const client = new LrclibClient({
   cache: new StorageCache(),
-  clientName: `lyrics-overlay-extension/${chrome.runtime.getManifest().version}`,
+  // LRCLIB meminta nama aplikasi, versi, dan alamat proyek.
+  clientName: `Lyrics Overlay extension v${chrome.runtime.getManifest().version} (${HOMEPAGE})`,
 });
 
 chrome.runtime.onMessage.addListener((message: unknown, sender, sendResponse) => {

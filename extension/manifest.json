@@ -3,6 +3,7 @@
   "name": "Lyrics Overlay",
   "version": "0.0.0",
   "description": "Lirik tersinkron di atas video YouTube.",
+  "homepage_url": "https://github.com/X5851X/Overlay-Lyrics",
   "minimum_chrome_version": "111",
   "permissions": ["storage"],
   "host_permissions": ["https://lrclib.net/*"],

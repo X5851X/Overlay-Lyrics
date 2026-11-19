@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo Lyrics Overlay</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background:
+          radial-gradient(55% 65% at 60% 58%, rgba(18, 86, 228, 0.95), rgba(18, 86, 228, 0) 70%),
+          radial-gradient(35% 45% at 38% 40%, rgba(84, 160, 255, 0.85), rgba(84, 160, 255, 0) 70%),
+          linear-gradient(160deg, #dbe7f3, #a9c2da);
+        font-family: system-ui, sans-serif;
+      }
+
+      body[data-bg="gelap"] {
+        background: radial-gradient(circle at 30% 20%, #2a2f45, #0d0f16 70%);
+      }
+
+      body[data-bg="ramai"] {
+        background: repeating-linear-gradient(
+          45deg,
+          #ffe066 0 40px,
+          #ff6b6b 40px 80px,
+          #4dabf7 80px 120px,
+          #ffffff 120px 160px,
+          #212529 160px 200px
+        );
+      }
+
+      #stage {
+        position: fixed;
+        inset: 0;
+      }
+
+      .controls {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        display: flex;
+        gap: 8px;
+      }
+
+      .controls button {
+        padding: 6px 12px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.85);
+        font: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <div class="controls">
+      <button id="play" type="button">Jeda</button>
+      <button id="restart" type="button">Ulang</button>
+      <button id="background" type="button">Ganti latar</button>
+    </div>
+    <script src="demo.js"></script>
+  </body>
+</html>

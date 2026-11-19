@@ -1,0 +1,24 @@
+{
+  "name": "lyrics-overlay",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "extension"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "build": "npm run build -w @lyrics-overlay/extension",
+    "watch": "npm run watch -w @lyrics-overlay/extension"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+extension/demo/demo.js
+*.log
+.env
+.env.*
+
+# Kunci tanda tangan Android disimpan di luar repo
+*.jks
+*.keystore
+
+.DS_Store
+Thumbs.db

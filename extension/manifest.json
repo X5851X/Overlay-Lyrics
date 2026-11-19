@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Lyrics Overlay",
+  "version": "0.0.0",
+  "description": "Lirik tersinkron di atas video YouTube.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "host_permissions": ["https://lrclib.net/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["page.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Lyrics Overlay: klik untuk menampilkan atau menyembunyikan lirik"
+  },
+  "commands": {
+    "toggle-overlay": {
+      "suggested_key": { "default": "Alt+Shift+L" },
+      "description": "Tampilkan atau sembunyikan lirik"
+    },
+    "offset-earlier": {
+      "suggested_key": { "default": "Alt+Shift+Comma" },
+      "description": "Lirik lebih cepat 0,5 detik"
+    },
+    "offset-later": {
+      "suggested_key": { "default": "Alt+Shift+Period" },
+      "description": "Lirik lebih lambat 0,5 detik"
+    }
+  }
+}
